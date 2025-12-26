@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <script defer src="js/script.js"></script>
+        <title>Color Palette Generator</title>
+    </head>
+    <body>
+        <header>
+            <h1>Color Palette Generator</h1>
+        </header>
+        
+        <article>
+            <div class="container_article">
+                <div class="container_article_text">
+                    <p>Fill 2 values to generate harmony (3rd randomizes), or all 3 for exact color</p>
+                </div>
+                <div class="inputs_hls">
+                    <label for="hue">H: </label>
+                    <input type="number" min="0" max="360" id="hue" aria-label="hue" placeholder="0-360">
+
+                    <label for="saturation">S: </label>
+                    <input type="number" min="0" max="100" id="saturation" aria-label="saturation" placeholder="0-100">
+
+                    <label for="ligntness">L: </label>
+                    <input type="number" min="0" max="100" id="lightness" aria-label="lightness" placeholder="0-100">
+                    <button id="reset" type="button" aria-label="reset">Reset</button>
+                </div>
+            </div>
+        </article>
+        <main>
+            <section>
+                <div class="container">
+                    <div id="color_generator_container">
+                        <div class="color-box">
+                            <div class="color-box-content"></div>
+                        </div>
+                        <div class="color-box">
+                            <div class="color-box-content"></div>
+                        </div>
+                        <div class="color-box">
+                            <div class="color-box-content"></div>
+                        </div>
+                        <div class="color-box">
+                            <div class="color-box-content"></div>
+                        </div>
+                        <div class="color-box">
+                            <div class="color-box-content"></div>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <!-- <button type="button" id="true-random" arial-label="true-random">True Random</button> -->
+                        <button type="button" id="hsl-harmony" arial-label="hsl-harmony">Change Color</button>
+                    </div>
+                </div>
+            </section> 
+        </main>
+        <footer>
+            <p>Designed and Developed by <a href="https://tamangsandip.com.np">Sandip Tamang</a></p>
+        </footer>
+    </body>
+</html>

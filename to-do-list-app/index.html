@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        <title>Todo List App</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+        <link rel="stylesheet" href="css/styles.css">
+
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+        <script defer src="js/script.js"></script>
+    </head>
+    <body>
+        <div class="main_container">
+            <header>
+                <div class="header_container">
+                    <p>TODO LIST APP</p>
+                    <!-- <button type="button" class="btn" id="theme-switcher" aria-label="theme-switcher"></button> -->
+                </div>
+            </header>
+
+            <div class="content_container">
+                <nav>
+                    <div class="nav_container">
+                        <button type="button" id="today_page" class="btn">Today's</button>
+                        <button type="button" id="task_page" class="btn">Tasks</button>
+                        <button type="button" id="completed_page" class="btn">Completed</button>      
+                    </div>
+                </nav>
+
+                <main>
+                    <section id="left" class="left">
+                        <div class="left_container">
+                            <div>
+                                <h2>You haven't chosen what task to do!</h2>
+                                <button type="button" id="choose" class="btn choose">Choose a Task</button>
+                            </div>
+                            <q>
+                                <i>Small steps every day lead to big results.</i>
+                            </q>
+                        </div>
+                    </section>
+
+                    <section id="center" class="center">
+                        <div class="center_container">
+                            <h2>Tasks</h2>
+                            <div class="input_container">
+                                <input type="text" id="input" placeholder="Enter your task....">
+                                <button type="button" id="add" class="btn" aria-label="add"><i class="fa-solid fa-plus"></i></button>
+                            </div>
+
+                            <ul id="task-list" class="task-list"></ul>
+                        </div>
+                    </section>
+
+                    <section id="right" class="right">
+                        <div class="right_container">
+                            <h2>Completed</h2>
+                            <ul id="completed-task"></ul>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </body>
+</html>

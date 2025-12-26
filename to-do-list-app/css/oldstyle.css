@@ -1,0 +1,212 @@
+
+
+body, html {
+    height: 100%;
+}
+
+body {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+    font-family: monospace
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.container {
+    background-color: var(--black);
+    padding: 20px;
+    width: 100%;
+    max-width: 1024px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+ul li {
+    list-style: none;
+}
+
+
+
+
+
+
+
+section ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    position: relative;
+}
+
+section ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    white-space: pre;
+    overflow-x: auto;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.button-wrapper {
+    display: flex;
+    gap: 1px;
+    position: absolute;
+    right: 0;
+}
+
+.Dark {
+    background-color: var(--white);;
+    color: var(--black);;
+}
+
+.Light {
+    background-color: var(--black);;
+    color: var(--white);
+}
+
+.Dark li {
+    border: 1px solid var(--black);
+}
+
+.Light li {
+    border: 1px solid var(--white);
+}
+
+.Dark section .container {
+    background-color: var(--white);
+}
+
+.Light section .container {
+    background-color: var(--black);
+}
+
+.Dark button {
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--black);
+}
+
+.Dark button:hover {
+    background-color: var(--black);
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+.Light button {
+    background-color: var(--black);
+    border: 1px solid var(--white);
+    color: var(--white);
+}
+
+.Light button:hover {
+    background-color: var(--white);
+    color: var(--black);
+    border: 1px solid var(--black);
+}
+
+.Light input {
+    background-color: var(--black);
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+
+.Dark input {
+    background-color: var(--white);
+    color: var(--black);;
+    border: 1px solid var(--black);;
+}
+
+.Light #theme-switcher {
+    background-color: var(--white);;
+    color: var(--black);;
+}
+
+.Dark #theme-switcher {
+    background-color: var(--black);;
+    color: var(--white);;
+}
+
+.Light input::placeholder {
+    color: var(--black);; 
+}
+
+.Light input::placeholder {
+    color: var(--white); 
+}
+
+
+.delete-task-btn {
+    border-right: 0;
+}
+
+
+
+
+.header_container {
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.nav_container {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.nav_lists {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    position: relative;
+}
+
+.nav_lists li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    white-space: pre;
+    overflow-x: auto;
+    cursor: pointer;
+}
+
+.nav_lists li a {
+    text-decoration: none;
+    color: var(--white)
+}
+
+.nav_lists li a {
+    padding: 0.5rem;
+}
+
+#active {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 0.5rem;
+    border: 1px solid var(--black);
+}
