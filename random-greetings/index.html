@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Random Greeting</title>
+        <style>
+            	
+            :root {
+                /* Base / surfaces */
+                --background: #FAFAFA;        /* page background */
+                --surface: #FFFFFF;           /* cards, containers */
+                --border: #E5E5E5;            /* borders, dividers */
+
+                /* Text */
+                --primary-text: #111111;      /* headings, main text */
+                --secondary-text: #555555;    /* subtext, captions */
+                --placeholder-text: #999999;  /* input placeholders */
+
+                /* Interactive / actions */
+                --primary-color: #007BFF;     /* main buttons, links */
+                --primary-hover: #0056b3;     /* hover state for primary buttons */
+                --secondary-color: #6C757D;   /* secondary buttons, badges */
+                --secondary-hover: #5A6268;   /* hover for secondary */
+                --success-color: #28A745;     /* success messages */
+                --warning-color: #FFC107;     /* warnings, alerts */
+                --danger-color: #DC3545;      /* errors, destructive actions */
+
+                /* Background shades */
+                --light-gray: #F5F5F5;        /* subtle backgrounds */
+                --medium-gray: #E0E0E0;       /* hover states, dividers */
+                --dark-gray: #343A40;         /* contrast backgrounds */
+            }
+
+            :root {
+                --font-heading: 'Inter', sans-serif;
+                --font-body: 'Inter', sans-serif;
+            }
+
+            html, body {
+                height: 100%;
+            }
+
+            html {
+                font-size: 16px; /* base, can scale */
+            }
+
+            h1 {
+                font-family: var(--font-heading);
+                font-weight: 700;
+                font-size: clamp(2rem, 5vw, 4rem);
+                line-height: 1.2;
+            }
+
+            p {
+                font-family: var(--font-body);
+                font-weight: 400;
+                font-size: clamp(0.875rem, 1.5vw, 1rem);
+                line-height: 1.6;
+            }
+
+            body {
+                padding: 1rem 0;
+                background-color: var(--background);
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                min-height: 100vh;
+            }
+
+            .greeting-card {
+                background-color: var(--surface);
+                border: 1px solid var(--border);
+                padding: 1rem;
+                max-width: 768px;
+                margin: 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                gap: 1rem;
+                border-radius: 50px;
+                box-shadow: 0px 0px 16px 2px var(--medium-gray)
+            }
+
+            button {
+                background-color: var(--primary-color);
+                color: var(--background);
+                border: none;
+                padding: 0.5rem 1rem;
+                border-radius: 999px;
+                box-shadow: 0px 0px 16px 2px var(--medium-gray)
+
+            }
+
+            button:hover {
+                background-color: var(--primary-hover);
+            }
+
+            button:active {
+                opacity: 0.9;
+            }
+
+            /* #greeting {
+                font
+            } */
+
+        </style>
+    </head>
+    <body>
+        <div class="greeting-card">
+            <h1>Random Greeting Generator</h1>
+
+            <div id="greeting">
+                Click the button to get started!
+            </div>
+
+            <button type="button" onClick="showGreeting()">Get a Greeting</button>
+        </div>
+        <script>
+            // generated text added into object.
+            const greetings = [
+                { emoji: '👋', text: 'Hey there! Hope you\'re having an awesome day!' },
+                { emoji: '😊', text: 'Hello, friend! You\'re doing great, keep it up!' },
+                { emoji: '🌟', text: 'Hi! You\'re a superstar, remember that!' },
+                { emoji: '☀️', text: 'Good to see you! Hope you\'re having a wonderful time!' },
+                { emoji: '💪', text: 'Hey you! You\'ve got this. Keep pushing forward!' },
+                { emoji: '😄', text: 'Welcome! So happy to see you around today!' },
+                { emoji: '🎉', text: 'Hey! You\'re awesome and things are about to get better!' },
+                { emoji: '✨', text: 'Hi there, beautiful soul! Keep shining bright!' },
+                { emoji: '🌈', text: 'Hello! Every day with you is a good day!' },
+                { emoji: '💖', text: 'Hey! Just reminding you that you\'re loved and valued!' },
+                { emoji: '🚀', text: 'Yo! Ready to make today count? Let\'s go!' },
+                { emoji: '😎', text: 'What\'s up, legend? You\'re crushing it!' }
+            ];
+
+
+            function showGreeting() {
+                const randomIndex = Math.floor(Math.random() * greetings.length);
+                const greeting = greetings[randomIndex]
+
+                const box = document.querySelector('#greeting');
+                box.textContent = `${greeting.emoji} ${greeting.text}`;
+            }
+        </script>
+    </body>
+</html>
